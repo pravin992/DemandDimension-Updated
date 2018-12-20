@@ -1,3 +1,5 @@
+/* https://www.mkyong.com/java/java-properties-file-examples/ */
+
 import java.util.*;
 import java.io.FileInputStream;
 import java.io.FileWriter;
@@ -44,6 +46,7 @@ public class DemandDime {
 	                //Add Data into respective variable
 	                jobID.add(new String(latlang[1]));
 	                lines.add(new Integer(latlang[2]));
+	                
 	                weight.add(new Integer(Math.round(Float.parseFloat(latlang[3]))));
 	                locationArr.add(new Double[] {Double.valueOf(latlang[5]),Double.valueOf(latlang[6])});
 	                DetDF.add(new Integer(Integer.parseInt(latlang[8])));
@@ -145,9 +148,9 @@ public class DemandDime {
      ll6.put("dimensionDemand",PP);
      
      JSONObject ll7 = new JSONObject(); // demandDimensions :PP 
-     ll6.put("dimensionName","FNB");
+     ll7.put("dimensionName","FNB");
      demandDimensions.add(ll7);
-     ll6.put("dimensionDemand",FNB);
+     ll7.put("dimensionDemand",FNB);
           
      JSONArray depot = new JSONArray(); // demandDimensions :depot[]
      depot.add(Integer.parseInt(prop.getProperty("depot")));
